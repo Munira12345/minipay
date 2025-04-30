@@ -2,15 +2,26 @@
 
 Mini Pay Flutter project.
 
-## Getting Started
+A modern, elegant Flutter app for seamless digital payments.
 
-This project is a starting point for a Flutter application.
+MiniPay is a simple, sleek mobile application designed to simulate a smooth checkout and payments experience.
+Built with Flutter, the app emphasizes intuitive UI and clean design, making it ideal for learning and showcasing modern app development practices.
 
-A few resources to get you started if this is your first Flutter project:
+✨ Features
+# Dashboard Screen
+A modern landing page with balance info, recent transactions, and navigation options.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Payments Screen
+A beautifully styled card preview (VISA) and a form to initiate payments with user input fields.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Material Design
+Fully adheres to Material Design guidelines for a polished and responsive UI.
+
+# Responsive UI
+Designed with layout flexibility in mind for different screen sizes.
+
+# Tech Stack
+Flutter 3.x
+Dart
+Material UI Components
+Clean code structure
