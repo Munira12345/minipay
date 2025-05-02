@@ -14,6 +14,11 @@ A modern landing page with balance info, recent transactions, and navigation opt
 # Payments Screen
 A beautifully styled card preview (VISA) and a form to initiate payments with user input fields.
 
+
+![WhatsApp Image 2025-05-02 at 20 21 32_162db60d](https://github.com/user-attachments/assets/aca3558b-e9c4-43da-92fc-8a064aafabbb)
+
+
+
 # Material Design
 Fully adheres to Material Design guidelines for a polished and responsive UI.
 
