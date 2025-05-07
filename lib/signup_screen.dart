@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dashboard_screen.dart';
 import 'payments_screen.dart';
 
 class SignUpScreen extends StatelessWidget {

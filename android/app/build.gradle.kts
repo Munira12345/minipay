@@ -5,6 +5,7 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+
 android {
     namespace = "com.example.minipay"
     compileSdk = flutter.compileSdkVersion
