@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../services/payment_service.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+
 
 class PaymentsScreen extends StatefulWidget {
   const PaymentsScreen({super.key});
@@ -7,6 +10,7 @@ class PaymentsScreen extends StatefulWidget {
   @override
   State<PaymentsScreen> createState() => _PaymentsScreenState();
 }
+
 
 class _PaymentsScreenState extends State<PaymentsScreen> {
   final TextEditingController _nameController = TextEditingController();
@@ -29,14 +33,39 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
     setState(() => _isLoading = false);
 
     if (success) {
+      // Show success notification
+      await showSuccessNotification();
+
+      // Show a success message
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Payment submitted successfully!")),
       );
     } else {
+      // Show failure message
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Failed to submit payment.")),
       );
     }
+  }
+
+  Future<void> showSuccessNotification() async {
+    const AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
+      'payment_channel_id',
+      'Payments',
+      channelDescription: 'Notifications for payment status',
+      importance: Importance.max,
+      priority: Priority.high,
+    );
+
+    const NotificationDetails platformDetails =
+    NotificationDetails(android: androidDetails);
+
+    await flutterLocalNotificationsPlugin.show(
+      0,
+      'Payment Successful',
+      'Your transaction has been processed.',
+      platformDetails,
+    );
   }
 
   @override
