@@ -60,6 +60,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
     const NotificationDetails platformDetails =
     NotificationDetails(android: androidDetails);
 
+
     await flutterLocalNotificationsPlugin.show(
       0,
       'Payment Successful',
