@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'login_screen.dart';
+import 'screens/login_screen.dart';
 
 // Initialize the notification plugin
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
