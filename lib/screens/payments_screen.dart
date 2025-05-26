@@ -71,32 +71,6 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
     );
   }
 
-
-
-
-
-
-
-  Future<void> _sendEmailNotification() async {
-    // Simulate an email service call
-    final success = await PaymentService.sendEmailNotification(
-      toEmail: "user@example.com",
-      subject: "Payment Notification",
-      body: "Your payment has been received successfully.",
-    );
-
-    if (success) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Email notification sent!")),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Failed to send email.")),
-      );
-    }
-  }
-
-
   @override
   Widget build(BuildContext context) {
     final primaryBlue = const Color(0xFF1565C0);
@@ -191,13 +165,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                       style: TextStyle(fontSize: 16)),
                 ),
               ),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: _sendEmailNotification,
-                  child: const Text("Send Notification to Email"),
-                ),
-              ),
+
               const SizedBox(height: 20),
             ],
           ),

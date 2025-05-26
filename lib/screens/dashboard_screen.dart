@@ -1,7 +1,27 @@
 import 'package:flutter/material.dart';
+import '../../services/email_service.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
+
+  Future<void> _sendEmailNotification(BuildContext context) async {
+    // email service call
+    final success = await EmailService.sendEmailNotification(
+      toEmail: "user@example.com",
+      subject: "Payment Notification",
+      body: "Your payment has been received successfully.",
+    );
+
+    if (success) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Email notification sent!")),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Failed to send email.")),
+      );
+    }
+  }
 
 
   @override
@@ -109,6 +129,13 @@ class DashboardScreen extends StatelessWidget {
                     amount: '+ KSh 2,000',
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton(
+                onPressed: () => _sendEmailNotification(context),
+                child: const Text("Send Notification to Email"),
               ),
             ),
           ],
