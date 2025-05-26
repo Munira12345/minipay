@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'payments_screen.dart';
+import 'dashboard_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
                   onPressed: ()
                   {
                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const PaymentsScreen()),
+                      MaterialPageRoute(builder: (context) => const DashboardScreen()),
                     );
 
                   },
