@@ -7,9 +7,9 @@ class EmailService {
     required String subject,
     required String body,
   }) async {
-    const serviceId = 'service_acuakyl';
-    const templateId = 'your_template_id';
-    const userId = 'your_public_key';
+    const serviceId = 'service_t65wqx6';
+    const templateId = 'template_nyog9nr';
+    const userId = '9RMEMhl9XIhHRsimk';
 
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
 

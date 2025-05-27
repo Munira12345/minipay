@@ -7,7 +7,7 @@ class DashboardScreen extends StatelessWidget {
   Future<void> _sendEmailNotification(BuildContext context) async {
     // email service call
     final success = await EmailService.sendEmailNotification(
-      toEmail: "user@example.com",
+      toEmail: "muniramohammedpanini@gmail.com",
       subject: "Payment Notification",
       body: "Your payment has been received successfully.",
     );
@@ -135,7 +135,7 @@ class DashboardScreen extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton(
                 onPressed: () => _sendEmailNotification(context),
-                child: const Text("Send Notification to Email"),
+                child: const Text("Rate Us"),
               ),
             ),
           ],
