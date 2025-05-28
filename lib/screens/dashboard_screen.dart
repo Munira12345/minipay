@@ -135,7 +135,7 @@ class DashboardScreen extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton(
                 onPressed: () => _sendEmailNotification(context),
-                child: const Text("Rate Us"),
+                child: const Text("Payment Notifications"),
               ),
             ),
           ],
