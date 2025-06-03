@@ -40,6 +40,7 @@ class DashboardScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16.0),
