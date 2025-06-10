@@ -126,6 +126,7 @@ class DashboardScreen extends StatelessWidget {
                     name: 'Mama Mboga',
                     amount: '- KSh 230',
                   ),
+
                   TransactionItem(
                     imagePath: 'assets/images/m-pesa.png',
                     name: 'M-PESA',
